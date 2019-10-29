@@ -1,11 +1,10 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Character({ img, name, species }) {
   return (
     <dl>
-      <dt>Img</dt>
-      <dd>{img}</dd>
+      <img src={img} />
 
       <dt>Name</dt>
       <dd>{name}</dd>
@@ -17,7 +16,7 @@ export default function Character({ img, name, species }) {
 }
 
 Character.propTypes = {
-  img: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-  species: propTypes.string.isRequired
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired
 };
